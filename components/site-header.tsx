@@ -1,6 +1,7 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, XIcon } from "lucide-react";
@@ -116,6 +117,7 @@ export function SiteHeader() {
             >
               Sign up
             </Link>
+            <ThemeToggle />
           </div>
           <button
             className="ml-6 md:hidden"
@@ -144,13 +146,16 @@ export function SiteHeader() {
               Magic UI
             </Link>
 
-            <button
-              className="ml-6 md:hidden"
-              onClick={() => setHamburgerMenuIsOpen((open) => !open)}
-            >
-              <span className="sr-only">Toggle menu</span>
-              {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
-            </button>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <button
+                className="ml-6 md:hidden"
+                onClick={() => setHamburgerMenuIsOpen((open) => !open)}
+              >
+                <span className="sr-only">Toggle menu</span>
+                {hamburgerMenuIsOpen ? <XIcon /> : <AlignJustify />}
+              </button>
+            </div>
           </div>
           <motion.ul
             className={`flex flex-col md:flex-row md:items-center uppercase md:normal-case ease-in`}

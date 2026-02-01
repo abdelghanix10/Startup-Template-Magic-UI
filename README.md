@@ -37,7 +37,7 @@ A premium, high-performance startup landing page template built with **Next.js**
 
    ```bash
    git clone https://github.com/abdelghanix10/Startup-Template-Magic-UI.git
-   cd startup-template
+   cd Startup-Template-Magic-UI
    ```
 
 2. Install dependencies:

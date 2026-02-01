@@ -6,7 +6,7 @@ const footerNavs = [
     label: "Product",
     items: [
       {
-        href: "/",
+        href: "/email-collection",
         name: "Email Collection",
       },
       {
